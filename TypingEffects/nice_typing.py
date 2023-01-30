@@ -10,6 +10,7 @@ class _CursorInfo(Structure):
     _fields_ = [("size", c_int),
                 ("visible", c_byte)]
 
+# https://github.com/billythegoat356/pystyle
 def set_cursor_visible(visible):
     ci = _CursorInfo()
     handle = windll.kernel32.GetStdHandle(-11)
